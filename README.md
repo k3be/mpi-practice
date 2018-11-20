@@ -14,3 +14,11 @@
 /usr/lib64/openmpi/bin/mpicc -o integrate integrate.c -lm
 /usr/lib64/openmpi/bin/mpiexec -n 4 -hostfile hostfile ./integrate 123456
 ```
+
+## Sample hostfile
+
+```
+6.6.6.6
+example.com
+i.need.a.break
+```
