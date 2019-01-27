@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include "mpi.h"
+// #include <time.h>
 
 int isprime(int n) {
   int i,squareroot;
@@ -18,6 +19,7 @@ int isprime(int n) {
 
 int main(int argc, char *argv[])
 {
+  // time_t start_time = time(NULL); // Timer
   // MPI Initialization
   int rank, size;
   MPI_Init(&argc, &argv);
@@ -78,5 +80,6 @@ int main(int argc, char *argv[])
   }
 
   MPI_Finalize();
+  // printf("%lld\n", time(NULL) - start_time); // Timer
   return 0;
 } 

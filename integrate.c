@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <math.h>
 #include "mpi.h"
+// #include <time.h>
 
 #define PI 3.1415926535
 
 int main(int argc, char **argv) 
 {
+  // time_t start_time = time(NULL); // Timer
   // MPI Initialization
   int rank, size;
   MPI_Init(&argc, &argv);
@@ -51,5 +53,6 @@ int main(int argc, char **argv)
   }
 
   MPI_Finalize();
+  // printf("%lld\n", time(NULL) - start_time); // Timer
   return 0;
 }   
