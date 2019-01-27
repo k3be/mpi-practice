@@ -8,6 +8,9 @@
 ## Run
 
 ```bash
+mpicc mpi_hello_world.c -o mpi_hello_world
+mpiexec -n 3 -hostfile hostfile --map-by node ./mpi_hello_world
+
 /usr/lib64/openmpi/bin/mpicc -o prime prime.c -lm
 /usr/lib64/openmpi/bin/mpiexec -n 4 -hostfile hostfile ./prime 123456
 
